@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard – Sunrise Haven</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 font-sans">
+<div class="flex h-screen overflow-hidden">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#1a2d4a] flex flex-col flex-shrink-0">
+    <div class="p-5 border-b border-white/10">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-amber-400 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </div>
+        <div><p class="text-white font-bold leading-tight">Sunrise Haven</p><p class="text-amber-300 text-xs">Hotel & Resort</p></div>
+      </div>
+    </div>
+    <nav class="flex-1 p-4 space-y-0.5 overflow-y-auto">
+      <p class="text-white/40 text-xs font-semibold px-3 py-2 uppercase tracking-wider">Overview</p>
+      <a href="admin.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-amber-500/20 text-amber-300">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+        <span class="text-sm font-medium">Admin Dashboard</span>
+      </a>
+      <a href="frontdesk.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span class="text-sm font-medium">Front Desk</span>
+      </a>
+      <p class="text-white/40 text-xs font-semibold px-3 py-2 uppercase tracking-wider mt-2">Reservations</p>
+      <a href="../staff/reservation-system.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h18M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <span class="text-sm font-medium">New Reservation</span>
+      </a>
+      <a href="../staff/reservation-records.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        <span class="text-sm font-medium">Reservation Records</span>
+      </a>
+      <p class="text-white/40 text-xs font-semibold px-3 py-2 uppercase tracking-wider mt-2">Operations</p>
+      <a href="../staff/check-in-checkout.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+        <span class="text-sm font-medium">Check-In / Out</span>
+      </a>
+      <a href="../staff/guest-profile.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="text-sm font-medium">Guest Profile</span>
+      </a>
+      <p class="text-white/40 text-xs font-semibold px-3 py-2 uppercase tracking-wider mt-2">Management</p>
+      <a href="../staff/reports-summary.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="18" y="3" width="4" height="18"/><rect x="10" y="8" width="4" height="13"/><rect x="2" y="13" width="4" height="8"/></svg>
+        <span class="text-sm font-medium">Reports & Analytics</span>
+      </a>
+      <a href="../staff/settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:bg-white/10 hover:text-white transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <span class="text-sm font-medium">Settings</span>
+      </a>
+    </nav>
+    <div class="p-4 border-t border-white/10">
+      <a href="../landing-page.html" class="flex items-center gap-3 p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors">
+        <div class="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center text-white text-sm font-bold">A</div>
+        <div><p class="text-white text-sm font-semibold">Admin User</p><p class="text-white/50 text-xs">Administrator</p></div>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 flex flex-col overflow-hidden">
+    <!-- Top Header -->
+    <header class="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between flex-shrink-0">
+      <div>
+        <h1 class="text-[#1a2d4a] font-bold text-xl">Admin Dashboard</h1>
+        <p class="text-slate-500 text-sm">Welcome back! Here's what's happening at Sunrise Haven today.</p>
+      </div>
+      <button class="flex items-center gap-2 px-5 py-2.5 bg-[#3A86FF] text-white rounded-xl text-sm font-semibold hover:bg-blue-600 transition-all shadow-md">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
+        New Reservation
+      </button>
+    </header>
+
+    <!-- Page Content -->
+    <main class="flex-1 overflow-y-auto p-6 space-y-6">
+
+      <!-- Summary Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-11 h-11 rounded-xl bg-amber-400 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 7v10M21 7v10M3 12h18M6 7h12a1 1 0 011 1v4H5V8a1 1 0 011-1z"/></svg>
+            </div>
+            <span class="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-green-50 text-green-600 font-semibold">▲ +3%</span>
+          </div>
+          <p class="text-[#1a2d4a] font-bold text-2xl">120</p>
+          <p class="text-slate-500 text-sm">Total Rooms</p>
+          <p class="text-slate-400 text-xs mt-0.5">87% occupied</p>
+        </div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-11 h-11 rounded-xl bg-blue-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <span class="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-green-50 text-green-600 font-semibold">▲ +12%</span>
+          </div>
+          <p class="text-[#1a2d4a] font-bold text-2xl">104</p>
+          <p class="text-slate-500 text-sm">Active Guests</p>
+          <p class="text-slate-400 text-xs mt-0.5">Currently staying</p>
+        </div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-11 h-11 rounded-xl bg-green-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg>
+            </div>
+            <span class="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-green-50 text-green-600 font-semibold">▲ +5%</span>
+          </div>
+          <p class="text-[#1a2d4a] font-bold text-2xl">18</p>
+          <p class="text-slate-500 text-sm">Today's Bookings</p>
+          <p class="text-slate-400 text-xs mt-0.5">4 check-outs</p>
+        </div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-11 h-11 rounded-xl bg-purple-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <span class="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-green-50 text-green-600 font-semibold">▲ +11%</span>
+          </div>
+          <p class="text-[#1a2d4a] font-bold text-2xl">₱390K</p>
+          <p class="text-slate-500 text-sm">Revenue (Apr)</p>
+          <p class="text-slate-400 text-xs mt-0.5">vs ₱350K Mar</p>
+        </div>
+      </div>
+
+      <!-- Revenue Chart -->
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="text-[#1a2d4a] font-semibold">Revenue Trend</h3>
+            <p class="text-slate-500 text-xs">Last 7 days (in PHP)</p>
+          </div>
+        </div>
+        <div class="flex items-end justify-between gap-2 h-48 px-2 mb-4">
+          <div class="flex flex-col items-center gap-2 flex-1">
+            <span class="text-xs text-slate-500 font-semibold">₱38K</span>
+            <div class="w-8 bg-amber-400 rounded" style="height:80px"></div>
+            <span class="text-xs text-slate-500">Mon</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 flex-1">
+            <span class="text-xs text-slate-500 font-semibold">₱52K</span>
+            <div class="w-8 bg-amber-400 rounded" style="height:120px"></div>
+            <span class="text-xs text-slate-500">Tue</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 flex-1">
+            <span class="text-xs text-slate-500 font-semibold">₱45K</span>
+            <div class="w-8 bg-amber-400 rounded" style="height:100px"></div>
+            <span class="text-xs text-slate-500">Wed</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 flex-1">
+            <span class="text-xs text-slate-500 font-semibold">₱55K</span>
+            <div class="w-8 bg-amber-400 rounded" style="height:130px"></div>
+            <span class="text-xs text-slate-500">Thu</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 flex-1">
+            <span class="text-xs text-slate-500 font-semibold">₱48K</span>
+            <div class="w-8 bg-amber-400 rounded" style="height:110px"></div>
+            <span class="text-xs text-slate-500">Fri</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 flex-1">
+            <span class="text-xs text-slate-500 font-semibold">₱62K</span>
+            <div class="w-8 bg-amber-400 rounded" style="height:140px"></div>
+            <span class="text-xs text-slate-500">Sat</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 flex-1">
+            <span class="text-xs text-slate-500 font-semibold">₱52.5K</span>
+            <div class="w-8 bg-amber-500 rounded shadow-md" style="height:120px"></div>
+            <span class="text-xs text-amber-600 font-semibold">Sun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="bg-[#1a2d4a] rounded-2xl p-6">
+        <h3 class="text-white font-semibold mb-4">Quick Actions</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <button class="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-xl transition-colors text-white">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
+            <span class="text-sm font-medium">New Reservation</span>
+          </button>
+          <button class="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-xl transition-colors text-white">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+            <span class="text-sm font-medium">Check-In Guest</span>
+          </button>
+          <button class="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-xl transition-colors text-white">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 7v10M21 7v10M3 12h18M6 7h12a1 1 0 011 1v4H5V8a1 1 0 011-1z"/></svg>
+            <span class="text-sm font-medium">Room Status</span>
+          </button>
+          <button class="flex items-center gap-3 p-3 bg-white/10 hover:bg-white/20 rounded-xl transition-colors text-white">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="18" y="3" width="4" height="18"/><rect x="10" y="8" width="4" height="13"/><rect x="2" y="13" width="4" height="8"/></svg>
+            <span class="text-sm font-medium">View Reports</span>
+          </button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

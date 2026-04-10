@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservation System</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="bg-[#F7F3E3] font-sans text-black min-h-screen flex flex-col p-6">
+        
+        <main class="w-full max-w-6xl mx-auto bg-[#F7F3E3] shadow-2xl flex flex-col rounded-xl overflow-hidden border border-black/10">
+            <!-- CARD HEADER -->
+            <header class="bg-[#FFC857] px-8 py-5 border-b border-black/10 flex justify-between items-center">
+                <div class="flex items-center gap-5">
+                    <div class="w-20 h-20 bg-[#F7F3E3] rounded-full flex items-center justify-center">
+                        <img src="transparentlogo.png" alt="Sunrise Haven Logo" class="w-full h-full object-contain p-2">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold italic text-gray-800 leading-tight">New Reservation Entry</h1>
+                        <p class="text-[11px] uppercase tracking-widest font-bold text-gray-700">Sunrise Haven Hotel | Reservation Portal</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] font-bold text-gray-600 uppercase">Encoding Status</p>
+                    <span class="text-[12px] font-bold text-orange-700 italic">Drafting Entry</span>
+                </div>
+            </header>
+
+            <!-- (1) GUEST INFORMATION -->
+            <div class="flex-1 overflow-y-auto bg-[#F7F3E3]/40 px-10 py-8 custom-scroll">
+                <form>
+                    <div class="max-w-5xl mx-auto flex flex-col gap-10">
+                        <section>
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-9 h-9 bg-[#FFC857] rounded-full flex items-center justify-center font-bold text-sm border border-black/10 shadow-sm">1</div>
+                                    <h2 class="text-xl font-bold uppercase tracking-tight">Guest Information</h2>
+                                </div>
+                                <div class="flex gap-6">
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="radio" name="guest_type" class="custom-radio" checked>
+                                        <span class="text-[11px] font-bold uppercase">New Guest</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="radio" name="guest_type" class="custom-radio">
+                                        <span class="text-[11px] font-bold uppercase">Returning</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="border-black/20 mb-6">
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">First Name</label>
+                                    <input type="text" placeholder="Enter First Name" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Last Name</label>
+                                    <input type="text" placeholder="Enter Last Name" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+    
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Contact Number</label>
+                                    <input type="text" placeholder="+[Country Code] [Number]" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Email Address</label>
+                                    <input type="email" placeholder="ruahplata@example.com" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                                
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Nationality</label>
+                                    <input type="text" placeholder="Filipino" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Date of Birth</label>
+                                    <input type="date" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+    
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Valid ID Selection</label>
+                                    <select class="w-full bg-[#FFE29A] h-11 px-4 text-base font-medium focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                        <option value="" disabled selected>Select an ID type</option>
+                                        <option>Passport</option>
+                                        <option>Driver's License</option>
+                                        <option>UMID/SSS ID</option>
+                                        <option>National ID (PhilID)</option>
+                                        <option>PRC ID</option>
+                                        <option>Voter's ID</option>
+                                        <option>Other Government ID</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">ID Number</label>
+                                    <input type="text" placeholder="XXXX-XXXX-XXXX" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+    
+                                <div class="md:col-span-2">
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Home Address</label>
+                                    <input type="text" placeholder="Street, Barangay, City, Province, Zip Code" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                            </div>
+                        </section>
+    
+                        <!-- (2) ROOM SELECTION AND STAY DETAILS -->
+                        <section>
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-9 h-9 bg-[#FFC857] rounded-full flex items-center justify-center font-bold text-sm border border-black/10 shadow-sm">2</div>
+                                    <h2 class="text-xl font-bold uppercase tracking-tight">Room Selection & Booking Details</h2>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <label class="font-bold text-[10px] uppercase text-gray-500">Booking Source</label>
+                                    <select class="clickable-select bg-[#FFC857] h-9 pl-4 pr-10 text-[11px] font-bold uppercase focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                        <option>Walk-in</option>
+                                        <option>Booking.com</option>
+                                        <option>Agoda</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="border-black/20 mb-6">
+                            
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-6">
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Check-In</label>
+                                    <input type="date" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Check-Out</label>
+                                    <input type="date" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Adults</label>
+                                    <input type="number" value="1" min="1" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-1">Children</label>
+                                    <input type="number" value="0" min="0" class="w-full bg-[#FFE29A] h-11 px-4 text-base focus:outline-none rounded-lg border border-black/5 shadow-sm">
+                                </div>
+                            </div>
+    
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+                                <div class="bg-[#FFC857] p-5 flex flex-col justify-between rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-shadow">
+                                    <div>
+                                        <h3 class="font-bold text-sm mb-1 uppercase tracking-wide">Luxury Villa</h3>
+                                        <p class="italic text-[11px] mb-2 leading-tight text-gray-700">A breathtaking space located right at the heart of the forest. 
+                                            Sunset Haven's Luxury Villas offer a variety of views from the resort's infinity pool to verdant forests.</p>
+                                    </div>
+                                    <div class="relative h-40 w-full bg-gray-200 overflow-hidden rounded-lg">
+                                        <img src="luxuryroom.jpg" alt="Standard Room" class="w-full h-full object-cover">
+                                        <span class="absolute top-2 right-2 text-[10px] bg-green-200 text-green-800 px-2 py-1 rounded font-bold shadow">Available</span>
+                                    </div>
+                                    <div class="flex justify-between items-end mt-3">
+                                        <div class="text-green-700 font-black text-xl">₱5,500/night</div>
+                                        <label class="flex items-center gap-2 cursor-pointer bg-white/20 px-3 py-1.5 rounded-full border border-black/5">
+                                            <input type="radio" name="room_selection" class="custom-radio">
+                                            <span class="text-[10px] font-bold uppercase">Select</span>
+                                        </label>
+                                    </div>
+                                </div>
+    
+                                <div class="bg-[#FFC857] p-5 flex flex-col justify-between rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-shadow">
+                                    <div>
+                                        <h3 class="font-bold text-sm mb-1 uppercase tracking-wide">Premium Villa</h3>
+                                        <p class="italic text-[11px] mb-2 leading-tight text-gray-700">A secluded private oasis that offers panoramic lake and forest views. 
+                                            A private plunge pool inspires endless hours of lounging and soaking up the sun—completely secluded.</p>
+                                    </div>
+                                    <div class="relative h-40 w-full bg-gray-200 overflow-hidden rounded-lg">
+                                        <img src="premiumroom.jpg" alt="Deluxe Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <span class="absolute top-2 right-2 text-[10px] bg-yellow-200 text-yellow-800 px-2 py-1 rounded font-bold shadow">4 rooms left</span>
+                                    </div>
+                                    <div class="flex justify-between items-end mt-3">
+                                        <div class="text-green-700 font-black text-xl">₱7,500/night</div>
+                                        <label class="flex items-center gap-2 cursor-pointer bg-white/20 px-3 py-1.5 rounded-full border border-black/5">
+                                            <input type="radio" name="room_selection" class="custom-radio">
+                                            <span class="text-[10px] font-bold uppercase">Select</span>
+                                        </label>
+                                    </div>
+                                </div>
+    
+                                <div class="bg-[#FFC857] p-5 flex flex-col justify-between rounded-2xl border border-black/5 shadow-sm hover:shadow-md transition-shadow">
+                                    <div>
+                                        <h3 class="font-bold text-sm mb-1 uppercase tracking-wide">Deluxe Premium Villas</h3>
+                                        <p class="italic text-[11px] mb-2 leading-tight text-gray-700">With ample room for relaxation and entertainment, our two-bedroom premium villa is a sanctuary 
+                                            perfect for family and friends. Experience the peak of comfort with multi-level living.</p>
+                                    </div>
+                                    <div class="relative h-40 w-full bg-gray-200 overflow-hidden rounded-lg">
+                                        <img src="deluxepremiumroom.jpg" alt="Premium Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <span class="absolute top-2 right-2 text-[10px] bg-red-200 text-red-800 px-2 py-1 rounded font-bold shadow">Fully booked</span>
+                                    </div>
+                                    <div class="flex justify-between items-end mt-3">
+                                        <div class="text-green-700 font-black text-xl">₱10,500/night</div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="bg-[#FBC453]/20 p-5 rounded-xl border border-dashed border-black/20">
+                                <label class="block font-bold text-[10px] uppercase text-gray-500 mb-2">Special Requests / Room Notes</label>
+                                <textarea placeholder="e.g., Extra pillows..." class="w-full bg-[#FFC857] rounded-lg p-4 text-base h-24 focus:outline-none placeholder:text-gray-500 border border-black/5 shadow-sm transition-colors resize-none"></textarea>
+                            </div>
+                        </section>
+    
+                        <section class="pb-6">
+                            <div class="flex items-center gap-4 mb-2">
+                                <div class="w-9 h-9 bg-[#FFC857] rounded-full flex items-center justify-center font-bold text-sm border border-black/10 shadow-sm">3</div>
+                                <h2 class="text-xl font-bold uppercase tracking-tight">Add-ons & Payment</h2>
+                            </div>
+                            <hr class="border-black/20 mb-6">
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-3">Additional Services</label>
+                                    <div class="flex flex-col gap-4">
+                                        <label class="flex items-center gap-4 cursor-pointer p-1">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <span class="text-[13px] font-semibold">Laundry (+₱400/kg)</span>
+                                        </label>
+                                        <label class="flex items-center gap-4 cursor-pointer p-1">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <span class="text-[13px] font-semibold">Airport Shuttle (+₱1,200)</span>
+                                        </label>
+                                        <label class="flex items-center gap-4 cursor-pointer p-1">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <span class="text-[13px] font-semibold">Extra Bed (+₱1,000)</span>
+                                        </label>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <label class="block font-bold text-[10px] uppercase text-gray-500 mb-3">Payment Method</label>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <label class="flex items-center gap-3 bg-[#FFC857] h-12 px-4 cursor-pointer rounded-xl border border-black/5 shadow-sm hover:bg-[#fbd381] transition-all">
+                                            <input type="radio" name="payment_method" class="custom-radio">
+                                            <span class="text-[11px] font-bold uppercase">Cash</span>
+                                        </label>
+                                        <label class="flex items-center gap-3 bg-[#FFC857] h-12 px-4 cursor-pointer rounded-xl border border-black/5 shadow-sm hover:bg-[#fbd381] transition-all">
+                                            <input type="radio" name="payment_method" class="custom-radio">
+                                            <span class="text-[11px] font-bold uppercase">GCash/Maya</span>
+                                        </label>
+                                        <label class="flex items-center gap-3 bg-[#FFC857] h-12 px-4 cursor-pointer rounded-xl border border-black/5 shadow-sm hover:bg-[#fbd381] transition-all">
+                                            <input type="radio" name="payment_method" class="custom-radio">
+                                            <span class="text-[11px] font-bold uppercase">Online Banking</span>
+                                        </label>
+                                        <label class="flex items-center gap-3 bg-[#FFC857] h-12 px-4 cursor-pointer rounded-xl border border-black/5 shadow-sm hover:bg-[#fbd381] transition-all">
+                                            <input type="radio" name="payment_method" class="custom-radio">
+                                            <span class="text-[11px] font-bold uppercase">Card</span>
+                                        </label>
+                                    </div>
+                                    <div class="mt-5 p-5 bg-green-100/60 rounded-xl border border-green-300 shadow-inner">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-[10px] font-bold uppercase text-green-800 tracking-widest">Estimated Total:</span>
+                                            <span class="text-2xl font-black text-green-950">₱ 0.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-10 pt-6 border-t border-black/20 flex justify-end gap-5">
+                                <button type="reset" class="text-gray-500 font-bold text-[11px] uppercase tracking-widest px-6 py-3 hover:text-red-600 transition-colors">
+                                    Discard Entry
+                                </button>
+                                <button type="submit" class="bg-[#3A86FF] text-white font-bold text-[11px] uppercase tracking-widest px-12 py-4 hover:bg-blue-600 transition-all rounded-xl shadow-lg active:transform active:scale-95">
+                                    Encode Reservation
+                                </button>
+                            </div>
+                            <div class="text-green-700 text-sm mt-3 font-semibold">
+                                ✔ Reservation will be recorded and confirmation issued to guest
+                            </div>
+                        </section>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
